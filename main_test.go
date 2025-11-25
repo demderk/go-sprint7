@@ -176,11 +176,6 @@ func (s *CafeTestSuite) testMatchSearchCount(city string, query string, expected
 	resultString = strings.ToLower(resultString)
 	queryString := strings.ToLower(query)
 
-	fmt.Println(resultString)
-	fmt.Println(queryString)
-
-	print(strings.Contains(resultString, queryString))
-
 	if strings.TrimSpace(resultString) == "" {
 		assert.Equal(s.T(), expected, 0)
 		return
